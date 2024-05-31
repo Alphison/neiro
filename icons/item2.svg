@@ -1,0 +1,30 @@
+<svg width="80" height="81" viewBox="0 0 80 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_b_1_135)">
+<rect x="16.557" y="18.1301" width="48.3024" height="45.0822" rx="21.4677" fill="white" fill-opacity="0.17"/>
+</g>
+<g filter="url(#filter1_b_1_135)">
+<rect x="0.456238" y="0.955902" width="79.4306" height="79.4306" rx="21.4677" fill="white" fill-opacity="0.01"/>
+<rect x="0.992931" y="1.4926" width="78.3572" height="78.3572" rx="20.931" stroke="white" stroke-opacity="0.16" stroke-width="1.07339"/>
+</g>
+<path d="M26.2175 36.3777H54.1255L40.1715 27.7906L26.2175 36.3777Z" stroke="#9EE012" stroke-width="2.14677" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30.511 36.3777V47.1115" stroke="#9EE012" stroke-width="2.14677" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36.9514 36.3777V47.1115" stroke="#9EE012" stroke-width="2.14677" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M43.3917 36.3777V47.1115" stroke="#9EE012" stroke-width="2.14677" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M49.832 36.3777V47.1115" stroke="#9EE012" stroke-width="2.14677" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27.2909 47.1115H53.0522" stroke="#9EE012" stroke-width="2.14677" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25.1441 51.4052H55.1989" stroke="#9EE012" stroke-width="2.14677" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<filter id="filter0_b_1_135" x="-30.672" y="-29.0989" width="142.76" height="139.54" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="23.6145"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_135"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1_135" result="shape"/>
+</filter>
+<filter id="filter1_b_1_135" x="-46.7728" y="-46.2731" width="173.889" height="173.889" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="23.6145"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_135"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1_135" result="shape"/>
+</filter>
+</defs>
+</svg>

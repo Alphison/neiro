@@ -1,0 +1,532 @@
+canvas{
+    width: 100vw;
+    heigth: 100vh;
+}
+/* Основной стиль шрифта для всего сайта */
+* {
+    font-family: 'Outfit', sans-serif !important;
+    margin: 0;
+    padding: 0;
+}
+
+.description{
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Стили для контейнера поля ввода с кнопкой */
+.input-with-button {
+    display: flex;
+    gap: 23px;
+    margin-top: 60px;
+}
+
+/* Стили для поля ввода */
+.input-field {
+    width: 340px;
+    padding: 15px 30px;
+    border-radius: 100px;
+    color: #555555;
+    font-weight: 400;
+    font-size: 18px;
+    border: 1px solid #555555;
+    background: #161616;
+}
+
+/* Анимация фокуса для поля ввода */
+@keyframes input-focus-animation {
+    from {
+        background: #151515;
+        color: #ddd;
+    }
+    to {
+        background: #161616;
+        color: #ffffff;
+    }
+}
+
+/* Стили для кнопки */
+.button {
+    padding: 18px 50px;
+    background: white;
+    color: black !important;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+    width: 170px;
+    text-align: center;
+}
+
+/* Стиль поля ввода при фокусе */
+.input-field:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.text, .subtext{
+    font-weight: 900;
+}
+.subtext{
+    margin-top: 0;
+}
+
+.blocks{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    flex-wrap: wrap;   
+}
+.block{
+    padding: 22px 32px;
+    border: 2px solid #92E50B;
+    border-radius: 100px;
+    position: relative;
+    width: 247px;
+    text-align: center;
+}
+.block-line{
+    position: absolute;
+    width: 80%;
+    background: #92E50B;
+    height: 3px;
+    transform: translate(50%, 50%);
+    top: 45%;
+    right: 50%;
+    animation-name: anim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes anim {
+    0%{
+        transform: translate(50%, 50%) scaleX(0);
+    }
+    100%{
+        transform: translate(50%, 50%) scaleX(1);
+    }
+}
+
+.block p {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Анимация "пульсации" для кнопки */
+@keyframes glowing-animation {
+    0% { background-color: #72f024; }
+    50% { background-color: #6cd800; }
+    100% { background-color: #72f024; }
+}
+
+/* Изменение фона кнопки при наведении */
+.button:hover {
+    background: #9EE012;
+}
+
+/* Общие стили контейнера */
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Стили для информационного блока */
+#info {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    padding: 5px;
+}
+
+/* Основные стили для html */
+html {
+    font-size: 100%;
+    justify-content: center;
+}
+
+/* Основные стили для body */
+body {
+    background: #000;
+    color: #F1F7FC;
+    font-weight: 400;
+    line-height: 1.75;
+    max-width: 100vw;
+    font-weight: 700; /* Уточнение для обычного текста с весом 700 */
+}
+
+/* Стили для абзацев */
+p {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Стили для заголовков */
+
+h1 {
+    margin-top: 0;
+    font-size: 11.089rem;
+}
+
+h2 {
+    font-size: clamp(4.236rem, 3.7027rem + 2.4378vw, 6.854rem);
+    text-align: center;
+    font-weight: 600;
+    line-height: 120px;
+}
+
+h3 {
+    font-size: 4.236rem;
+    text-align: center;
+    margin: 15vh 0 !important;
+}
+
+h4 {
+    font-size: 2.618rem;
+}
+
+h5 {
+    font-size: 1.618rem;
+}
+
+/* Стили для ссылок с эффектом "подчеркивания" при наведении */
+.legacy-link {
+    text-decoration: none;
+    color: #Fffefd;
+    position: relative;
+}
+
+.legacy-link::before {
+    content: '';
+    background-color: hsla(23, 100%, 50%, 0.797);
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 5px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+.legacy-link:hover::before {
+    bottom: 0;
+    height: 100%;
+}
+
+/* Стили для мелкого текста */
+small, .text_small {
+    font-size: 0.618rem;
+}
+
+
+/* Контейнер для анимации */
+#container {
+    visibility: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1000ms ease;
+}
+
+/* Стили для блока обратного отсчета */
+#countdown {
+    text-align: center;
+    color: #757575;
+}
+
+/* Стиль для точек */
+.dot {
+    color: #72f024;
+}
+
+/* Стили для иконок социальных сетей */
+.icons {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+}
+
+.icons img {
+    color: #0D1018;
+    height: 35px;
+    width: 35px;
+    margin: 0 7px;
+    border-radius: 50px;
+    transition: all 200ms ease;
+}
+
+.icons img:hover, .icons img:active {
+    color: #72f024;
+    background: none;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.timer__items {
+    display: flex;
+    font-size: 48px;
+    margin-top: 30px;
+  }
+  .timer__item {
+    position: relative;
+    min-width: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .timer__item::before {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    font-size: 14px;
+  }
+  .timer__item:not(:last-child)::after {
+    content: ':';
+    position: absolute;
+    right: -15px;
+  }
+
+  header{
+    width: 80vw;
+    position: fixed;
+    transform: translateX(-50%);
+    left: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    z-index: 9999;
+  }
+  header a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+  }
+  header nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+  }
+
+  .btnHeader_wrapper{
+    display: flex;
+    justify-content: end;
+  }
+
+  .btnHeader{
+    color: #9EE012;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 18px 50px;
+    border-radius: 100px;
+    border: 1px solid #9EE012;
+    transition: 0.3s;
+    background: none;
+    text-align: center;
+}
+  .btnHeader:hover{
+    background: #9EE012;
+    color: black;
+  }
+
+  header .logo{
+    font-weight: 700;
+    color: #9EE012;
+    font-size: 30px;
+  }
+
+  .burger{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    align-items: end;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .burger .line{
+    height: 2px;
+    width: 23px;
+    background: #D9D9D9;
+  }
+  .div-grid{
+    display: none;
+  }
+
+  .burger_menu{
+    display: none;
+    position: fixed;
+    background: black;
+    z-index: 10000;
+    height: 100vh;
+    width: 200px;
+    padding: 40px 20px;
+  }
+  .burger_menu.active{
+    display: block;
+  }
+  .x{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .burger_menu nav{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .burger_menu nav a{
+    text-decoration: none;
+    color: white;
+  }
+
+
+  .items{
+    margin-top: 95px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 120px;
+
+  }
+  .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .item img{
+    width: 79px;
+  }
+  .item-name{
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 32px;
+    text-align: start;
+
+  }
+  .item-text{
+    font-size: 19px;
+    font-weight: 700;
+    color: #9EE012;
+    text-align: start;
+
+  }
+  .item-text span{
+    color: #555555;
+    margin-top: 11px;
+  } 
+
+/* Адаптивные стили для улучшения визуального отображения на мобильных устройствах */
+@media (max-width: 900px) {
+    .div-grid{
+        display: block;
+    }
+    .logo{
+        display: none;
+    }
+    header{
+        grid-template-columns: 1fr;
+    }
+    header nav{
+        display: none;
+    }
+    header .icons{
+        display: none;
+    }
+    .burger{
+        display: flex;
+    }
+}
+@media (max-width: 768px) {
+    .wrapper{
+        width: 100%;
+        height: 100%;
+    }
+    .input-with-button, .button, p, .text_small, html, body, h1, h2, h3, h4, h5, .icons img {
+        /* Адаптивные изменения для различных элементов */
+    }
+    .blocks{
+        justify-content: center;
+    }
+    .description{
+        width: 100% !important;
+        margin: 1em 20px;
+        font-size: 15px !important;
+    }
+    
+    /* Специфические адаптации для мобильных устройств */
+    .input-field::placeholder {
+        font-size: 12px; /* Уменьшенный размер шрифта для placeholder */
+        color: #353535;
+    }
+
+    .input-with-button {
+        width: 90%; /* Процентная ширина для увеличения гибкости */
+        margin: 0 auto; /* Центрирование элемента */
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-size: smaller; /* Уменьшение размера шрифта для заголовков */
+    }
+
+    h2 {
+        font-size: 39px;
+    }
+    
+    .submit-icon {
+        height: 23px !important;
+        margin-right: 33px !important;
+    }
+}
+@media (max-width: 450px) {
+    .input-with-button{
+        height: 55px;
+    }
+    button{
+        padding: 17px 20px !important;
+    }
+    .block{
+        padding: 11px 16px !important; 
+    }
+    .block p{
+        font-size: 15px !important;
+    }
+}
+
+/* Стили для плашки успеха */
+.success-banner {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #9ce302;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon, .submit-icon {
+    /* Специфические стили для иконок */
+    margin-right: 5px;  
+    height: 26px;
+}
